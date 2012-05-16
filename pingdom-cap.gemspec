@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   
   s.add_dependency 'awesome_print',        '~> 1.0.2'
-  s.add_dependency 'capistrano',           '~> 2.9.0'
+  s.add_dependency 'capistrano',           '>= 2.9.0'
   s.add_dependency 'faraday',              [ '>= 0.7.5', '< 0.8' ]
   s.add_dependency 'faraday_middleware',   [ '>=  0.7',  '< 0.8' ]
   s.add_dependency 'hashie',               '~> 1.2.0'
@@ -30,5 +30,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'webmock',  '~> 1.7.10'
   s.add_development_dependency 'cucumber', '~> 1.1.4'
   s.add_development_dependency 'aruba',    '~> 0.4.11'
-  s.add_development_dependency 'vcr',      '= 2.0.0.rc1'
+  s.add_development_dependency 'vcr',      '2.0.0.rc1'
 end
