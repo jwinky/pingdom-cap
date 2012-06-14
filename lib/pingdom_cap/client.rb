@@ -20,8 +20,8 @@ module PingdomCap
         builder.response :logger if options[:logger]
         builder.adapter Faraday.default_adapter
         builder.request  :url_encoded
-        builder.use Faraday::Response::Mashify
-        builder.use Faraday::Response::ParseJson
+        builder.use FaradayMiddleware::Mashify
+        builder.use FaradayMiddleware::ParseJson
       end
       @connection.basic_auth(options[:username], options[:password])
     end
